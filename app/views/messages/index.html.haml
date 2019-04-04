@@ -1,0 +1,28 @@
+.message
+  .message-box グループを作成しました
+.layout
+  .layout_dashboard
+    .dashboard
+      .dashboard_header
+        .dashboard_name seo
+        %ul.dashboard_iconWrap
+          %li.dashboard_edit
+            %a{href: "a"}
+              %i.fa.fa-edit
+          %li.dashbord_setting
+            %a{href: "a"}
+              %i.fa.fa-cog
+
+      .dashboard_footer
+  .layout_timeline
+    .timeline
+      .timeline_header
+      .timeline_body
+      .timeline_footer
+        %form.form
+          .form_wrap
+            .form_inputWrap
+              %input.form_input{placeholder: "type a message"}
+              %label.form_inputLabel
+                %i.fa.fa-image
+            %input.form_submitBtn{type: "submit", value: "Send"}
