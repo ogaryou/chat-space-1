@@ -14,14 +14,26 @@
               %i.fa.fa-cog
 
       .dashboard_body
-        %ul.dashboard_itemWrap
-          %li.dashboard_
-            %a
-              .
-              .
+        %ul.dashboard_groupWrap
+          %li.dashboard_group
+            %a{href: "a"}
+              .dashboard_groupName sample1
+              .dashboard_groupNewComment Good bye work
+          %li.dashboard_group
+            %a{href: "a"}
+              .dashboard_groupName sample2
+              .dashboard_groupNewComment Hello
+          %li.dashboard_group
+            %a{href: "a"}
+              .dashboard_groupName example
+              .dashboard_groupNewComment まだメッセージがありません
   .layout_timeline
     .timeline
       .timeline_header
+        .timeline_groupName
+          .timeline_groupName
+          .timeline_membersName
+        .timeline_editBtn
       .timeline_body
       .timeline_footer
         %form.form
