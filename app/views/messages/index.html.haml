@@ -4,7 +4,7 @@
   .layout_dashboard
     .dashboard
       .dashboard_header
-        .dashboard_name seo
+        .dashboard_name wakugami
         %ul.dashboard_iconWrap
           %li.dashboard_edit
             %a{href: "a"}
@@ -30,11 +30,27 @@
   .layout_timeline
     .timeline
       .timeline_header
-        .timeline_groupName
-          .timeline_groupName
-          .timeline_membersName
-        .timeline_editBtn
+        .timeline_groupWrap
+          .timeline_groupName Sample
+          .timeline_membersName Member：wakugami
+        %a.timeline_editBtn Edit
       .timeline_body
+        %ul
+          %li.timeline_bodyList
+            .timeline_bodyInfoWrap
+              .timeline_bodyName wakugami
+              .timeline_bodyDate 2019/04/04(Thu) 14:41:27
+            .timeline_bodyMessage これはテストです
+          %li.timeline_bodyList
+            .timeline_bodyInfoWrap
+              .timeline_bodyName wakugami
+              .timeline_bodyDate 2019/04/04(Thu) 14:41:27
+            .timeline_bodyMessage これはテストです
+          %li.timeline_bodyList
+            .timeline_bodyInfoWrap
+              .timeline_bodyName wakugami
+              .timeline_bodyDate 2019/04/04(Thu) 14:41:27
+            .timeline_bodyMessage これはテストです
       .timeline_footer
         %form.form
           .form_wrap
