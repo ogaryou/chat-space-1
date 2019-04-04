@@ -4,8 +4,8 @@
 |------|----|-------|
 |body|text|
 |image|string|
-|group_id|integer|null: false, foreign_key: true|
-|user_id|integer|null: false, foreign_key: true|
+|group_id|references|null: false, foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :groups
@@ -17,11 +17,14 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|email|string|null: false|
+|email|string|unique: true, null: false|
+
+### index
+- add_index :users, :name
 
 ### Association
 - has_many :messages
-- has_many :groups, through: :members
+- has_many :groups, through: :group_users
 
 ## groupsテーブル
 
@@ -31,15 +34,14 @@
 
 ### Association
 - has_many :messages
-- has_many :users, through: :members
+- has_many :users, through: :group_users
 
-## membersテーブル(中間テーブル groups-users)
+## group_users
 
 |Column|Type|Options|
 |------|----|-------|
-|member|string|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
+|group_id|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
