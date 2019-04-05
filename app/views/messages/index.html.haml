@@ -1,62 +1,61 @@
 .message
   .message-box グループを作成しました
 .layout
-  .layout_dashboard
+  .layout__dashboard
     .dashboard
-      .dashboard_header
-        .dashboard_name wakugami
-        %ul.dashboard_iconWrap
-          %li.dashboard_edit
+      .dashboard__header
+        .dashboard__name wakugami
+        %ul.dashboard__iconWrap
+          %li.dashboard__edit
             %a{href: "a"}
               %i.fa.fa-edit
-          %li.dashbord_setting
+          %li.dashbord__setting
             %a{href: "a"}
               %i.fa.fa-cog
 
-      .dashboard_body
-        %ul.dashboard_groupWrap
-          %li.dashboard_group
+      .dashboard__body
+        %ul.dashboard__groupWrap
+          %li.dashboard__group
             %a{href: "a"}
-              .dashboard_groupName sample1
-              .dashboard_groupNewComment Good bye work
-          %li.dashboard_group
+              .dashboard__groupName sample1
+              .dashboard__groupNewComment Good bye work
+          %li.dashboard__group
             %a{href: "a"}
-              .dashboard_groupName sample2
-              .dashboard_groupNewComment Hello
-          %li.dashboard_group
+              .dashboard__groupName sample2
+          %li.dashboard__group
             %a{href: "a"}
-              .dashboard_groupName example
-              .dashboard_groupNewComment まだメッセージがありません
-  .layout_timeline
+              .dashboard__groupName example
+              .dashboard__groupNewComment まだメッセージがありません
+  .layout__timeline
     .timeline
-      .timeline_header
-        .timeline_groupWrap
-          .timeline_groupName Sample
-          .timeline_membersName Member：wakugami
-        %a.timeline_editBtn Edit
-      .timeline_body
+      .timeline__header
+        .timeline__groupWrap
+          .timeline__groupName Sample
+          .timeline__membersName Member：wakugami
+        %a.timeline__editBtn Edit
+      .timeline__body
         %ul
-          %li.timeline_bodyList
-            .timeline_bodyInfoWrap
-              .timeline_bodyName wakugami
-              .timeline_bodyDate 2019/04/04(Thu) 14:41:27
-            .timeline_bodyMessage これはテストです
-          %li.timeline_bodyList
-            .timeline_bodyInfoWrap
-              .timeline_bodyName wakugami
-              .timeline_bodyDate 2019/04/04(Thu) 14:41:27
-            .timeline_bodyMessage これはテストです
-          %li.timeline_bodyList
-            .timeline_bodyInfoWrap
-              .timeline_bodyName wakugami
-              .timeline_bodyDate 2019/04/04(Thu) 14:41:27
-            .timeline_bodyMessage これはテストです
-      .timeline_footer
+          %li.timeline__bodyList
+            .timeline__bodyInfoWrap
+              .timeline__bodyName wakugami
+              .timeline__bodyDate 2019/04/04(Thu) 14:41:27
+            .timeline__bodyMessage これはテストです
+          %li.timeline__bodyList
+            .timeline__bodyInfoWrap
+              .timeline__bodyName wakugami
+              .timeline__bodyDate 2019/04/04(Thu) 14:41:27
+            .timeline__bodyMessage これはテストです
+          %li.timeline__bodyList
+            .timeline__bodyInfoWrap
+              .timeline__bodyName wakugami
+              .timeline__bodyDate 2019/04/04(Thu) 14:41:27
+            .timeline__bodyMessage これはテストです
+      .timeline__footer
         %form.form
-          .form_wrap
-            .form_inputWrap
-              %input.form_input{placeholder: "type a message"}
-              %label.form_inputLabel{for: "upload-icon"}
+          .form__wrap
+            .form__inputWrap
+              %input.form__input{placeholder: "type a message"}
+              %label.form__inputLabel{for: "upload-icon"}
                 %i.fa.fa-picture-o
                 %input{type: "file", id: "upload-icon"}
-            %input.form_submitBtn{type: "submit", value: "Send"}
+            %input.form__submitBtn{type: "submit", value: "Send"}

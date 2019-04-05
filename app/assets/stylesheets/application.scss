@@ -18,11 +18,11 @@ body {
 // layout
 
 .layout {
-  &_dashboard {
+  &__dashboard {
     float: left;
     width: 300px;
   }
-  &_timeline {
+  &__timeline {
     float: right;
     width: calc(100vw - 300px);
   }
@@ -46,7 +46,7 @@ body {
 
 .dashboard {
   background-color: #2f3e51;
-  &_header {
+  &__header {
     background-color: #253141;
     height: 100px;
     padding: 0 20px;
@@ -56,10 +56,10 @@ body {
     align-items: center;
     justify-content: space-between;
   }
-  &_name {
+  &__name {
     font-weight: bold;
   }
-  &_iconWrap {
+  &__iconWrap {
     font-size: 0;
     li {
       display: inline-block;
@@ -70,13 +70,13 @@ body {
       color: #fff;
     }
   }
-  &_body {
+  &__body {
     height: calc(100vh - 100px);
     background-color: #2f3e51;
     padding: 20px 20px 0;
     overflow: scroll;
   }
-  &_group {
+  &__group {
     margin-bottom: 40px;
     a {
       text-decoration: none;
@@ -85,7 +85,7 @@ body {
       font-weight: bold;
     }
   }
-  &_groupNewComment {
+  &__groupNewComment {
     font-size: 11px;
     margin-top: 5px;
   }
@@ -93,25 +93,25 @@ body {
 
 // timeline
 .timeline {
-    &_header {
+    &__header {
       height: 100px;
       display: flex;
       justify-content: space-between;
       padding: 28px 40px 0;
     }
-    &_groupWrap {
+    &__groupWrap {
       margin-top: 7px;
     }
-    &_groupName {
+    &__groupName {
       font-size: 20px;
       color: #333;
       margin-bottom: 15px;
     }
-    &_membersName {
+    &__membersName {
       font-size: 12px;
       color: #999999;
     }
-    &_editBtn {
+    &__editBtn {
       height: 40px;
       color: #38aef0;
       line-height: 40px;
@@ -119,7 +119,7 @@ body {
       border: solid 1px #38aef0;
       display: inline-block;
     }
-    &_body {
+    &__body {
       height: calc(100vh - 190px);
       background-color: #fafafa;
       padding: 46px 40px 0;
@@ -146,7 +146,7 @@ body {
         margin-bottom: 10px;
       }
     }
-    &_footer {
+    &__footer {
       height: 90px;
       padding: 20px 40px;
       background-color: #dcdcdc;
@@ -156,15 +156,15 @@ body {
 
 // form
 .form {
-  &_wrap {
+  &__wrap {
     display: flex;
     justify-content: space-between;
   }
-  &_inputWrap {
+  &__inputWrap {
     flex-grow: 1;
     position: relative;
   }
-  &_input {
+  &__input {
     height: 50px;
     width: 100%;
     padding: 0 10px;
@@ -173,7 +173,7 @@ body {
     font-size: 16px;
     position: relative;
   }
-  &_submitBtn {
+  &__submitBtn {
     margin-left: 15px;
     height: 50px;
     padding: 0 30px;
@@ -182,7 +182,7 @@ body {
     cursor: pointer;
     font-size: 16px;
   }
-  &_inputLabel {
+  &__inputLabel {
     font-size: 1.3rem;
     position: absolute;
     top: 10px;
