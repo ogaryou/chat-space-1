@@ -56,6 +56,7 @@
           .form_wrap
             .form_inputWrap
               %input.form_input{placeholder: "type a message"}
-              %label.form_inputLabel
-                %i.fa.fa-image
+              %label.form_inputLabel{for: "upload-icon"}
+                %i.fa.fa-picture-o
+                %input{type: "file", id: "upload-icon"}
             %input.form_submitBtn{type: "submit", value: "Send"}
