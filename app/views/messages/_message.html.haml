@@ -1,0 +1,11 @@
+%li.timeline__bodyList
+  .timeline__bodyInfoWrap
+    .timeline__bodyName
+      = message.user.name
+    .timeline__bodyDate
+      = message.created_at.strftime("%Y/%m/%d %H:%M")
+
+  - if message.content.present?
+    .timeline__bodyMessage
+      = message.content
+  = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
