@@ -32,8 +32,11 @@
       .timeline__header
         .timeline__groupWrap
           .timeline__groupName Sample
-          .timeline__membersName Member：wakugami
-        = link_to "#", class: "timeline__editBtn " do
+          .timeline__membersName
+            Member：
+            - @group.users.each do |group_member|
+              %div #{group_member.name}&nbsp;
+        = link_to edit_group_path(@group[:id]), class: "timeline__editBtn " do
           Edit
       .timeline__body
         %ul
