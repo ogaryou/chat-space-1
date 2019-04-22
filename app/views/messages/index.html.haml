@@ -32,32 +32,22 @@
       .timeline__header
         .timeline__groupWrap
           .timeline__groupName Sample
-          .timeline__membersName Member：wakugami
-        = link_to "#", class: "timeline__editBtn " do
+          .timeline__membersName
+            Member：
+            - @group.users.each do |group_member|
+              %div #{group_member.name}&nbsp;
+        = link_to edit_group_path(@group[:id]), class: "timeline__editBtn " do
           Edit
       .timeline__body
         %ul
-          %li.timeline__bodyList
-            .timeline__bodyInfoWrap
-              .timeline__bodyName wakugami
-              .timeline__bodyDate 2019/04/04(Thu) 14:41:27
-            .timeline__bodyMessage これはテストです
-          %li.timeline__bodyList
-            .timeline__bodyInfoWrap
-              .timeline__bodyName wakugami
-              .timeline__bodyDate 2019/04/04(Thu) 14:41:27
-            .timeline__bodyMessage これはテストです
-          %li.timeline__bodyList
-            .timeline__bodyInfoWrap
-              .timeline__bodyName wakugami
-              .timeline__bodyDate 2019/04/04(Thu) 14:41:27
-            .timeline__bodyMessage これはテストです
+          = render @messages
+
       .timeline__footer
-        %form.form
-          .form__wrap
-            .form__inputWrap
-              %input.form__input{placeholder: "type a message"}
-              %label.form__inputLabel{for: "upload-icon"}
-                %i.fa.fa-picture-o
-                %input{type: "file", id: "upload-icon"}
-            %input.form__submitBtn{type: "submit", value: "Send"}
+        .form
+          = form_for [@group, @message] do |f|
+            = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+            .form__mask
+              = f.label :image, class: 'form__mask__image' do
+                = fa_icon 'picture-o', class: 'icon'
+                = f.file_field :image, class: 'hidden'
+            = f.submit 'Send', class: 'form__submit'

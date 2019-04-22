@@ -1,5 +1,12 @@
 @import "./reset";
 @import "font-awesome";
+@import "config/size";
+@import "modules/user";
+@import "config/colors";
+@import "modules/flash";
+@import "modules/group";
+@import "modules/chat";
+@import "modules/side_bar";
 
 //全体指定
 
@@ -110,6 +117,7 @@ body {
     &__membersName {
       font-size: 12px;
       color: #999999;
+      display: flex;
     }
     &__editBtn {
       height: 40px;
@@ -157,15 +165,10 @@ body {
 
 // form
 .form {
-  &__wrap {
+  form {
     display: flex;
-    justify-content: space-between;
   }
-  &__inputWrap {
-    flex-grow: 1;
-    position: relative;
-  }
-  &__input {
+  &__message {
     height: 50px;
     width: 100%;
     padding: 0 10px;
@@ -174,7 +177,7 @@ body {
     font-size: 16px;
     position: relative;
   }
-  &__submitBtn {
+  &__submit {
     margin-left: 15px;
     height: 50px;
     padding: 0 30px;
@@ -183,13 +186,16 @@ body {
     cursor: pointer;
     font-size: 16px;
   }
-  &__inputLabel {
+  &__mask {
+    position: relative;
+  }
+  &__mask__image {
     font-size: 1.3rem;
     position: absolute;
     top: 10px;
     right: 10px;
     cursor: pointer;
-    input {
+    .hidden {
       display: none;
     }
   }
