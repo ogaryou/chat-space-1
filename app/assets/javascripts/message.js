@@ -33,8 +33,7 @@ $(function(){
     .done(function(data){
       var html = buildHTML(data);
       $('#message').append(html);
-      $('#message_content').val('');
-      $('#message_image').val('');
+      $('#new_message')[0].reset();
       $('.timeline__body').animate({scrollTop: $(".timeline__body")[0].scrollHeight }, 'fast');
     })
     .fail(function() {
