@@ -1,7 +1,8 @@
 $(function(){
+  // HTML作成
   function buildHTML(comment){
     var image_url = (comment.image)? `<image class="lower-message_image" src="${comment.image}">`:"";
-    var html = `<li class="timeline__bodyList">
+    var html = `<li class="timeline__bodyList" data-id="${comment.id}">
                   <div class="timeline__bodyInfoWrap">
                   <div class="timeline__bodyName">
                   ${comment.user_name}
@@ -17,6 +18,8 @@ $(function(){
                 </li>`
     return html;
   }
+
+  //メッセージ送信の非同期化
   $('#new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
@@ -40,4 +43,30 @@ $(function(){
       alert('メッセージを送信できません');
     });
   })
+
+  //自動更新
+  function reloadMessages(){
+    var last_message_id = $('.timeline__bodyList').last().data('id');
+    var href = 'api/messages'
+    $.ajax({
+    url: href,
+    type: 'GET',
+    data:{id: last_message_id},
+    dataType: 'json'
+    })
+
+    .done(function(messages){
+      messages.forEach(function(message){
+        var insertHTML = buildHTML(message)
+        $('#message').append(insertHTML)
+      });
+
+      $('.timeline__body').animate({scrollTop: $('.timeline__body')[0].scrollHeight}, 'fast');
+    })
+
+    .fail(function(){
+      console.log('error');
+    });
+  };
+  setInterval(reloadMessages, 5000);
 })
