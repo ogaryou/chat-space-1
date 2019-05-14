@@ -3,35 +3,12 @@
 .layout
   .layout__dashboard
     .dashboard
-      .dashboard__header
-        .dashboard__name wakugami
-        %ul.dashboard__iconWrap
-          %li.dashboard__edit
-            = link_to do
-              %i.fa.fa-edit
-
-          %li.dashbord__setting
-            = link_to do
-              %i.fa.fa-cog
-
-      .dashboard__body
-        %ul.dashboard__groupWrap
-          %li.dashboard__group
-            = link_to do
-              .dashboard__groupName sample1
-              .dashboard__groupNewComment Good bye work
-          %li.dashboard__group
-            = link_to do
-              .dashboard__groupName sample2
-          %li.dashboard__group
-            = link_to do
-              .dashboard__groupName example
-              .dashboard__groupNewComment まだメッセージがありません
+      = render 'shared/side_bar'
   .layout__timeline
     .timeline
       .timeline__header
         .timeline__groupWrap
-          .timeline__groupName Sample
+          .timeline__groupName #{@group.name}
           .timeline__membersName
             Member：
             - @group.users.each do |group_member|
