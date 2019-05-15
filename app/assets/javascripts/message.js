@@ -56,13 +56,13 @@ $(function(){
     })
 
     .done(function(messages){
+      console.log(messages);
       messages.forEach(function(message){
         var insertHTML = buildHTML(message)
         $('#message').append(insertHTML)
       });
 
       $('.timeline__body').animate({scrollTop: $('.timeline__body')[0].scrollHeight}, 'fast');
-      console.log(messages);
     })
 
     .fail(function(){
