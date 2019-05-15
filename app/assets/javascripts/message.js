@@ -62,6 +62,7 @@ $(function(){
       });
 
       $('.timeline__body').animate({scrollTop: $('.timeline__body')[0].scrollHeight}, 'fast');
+      console.log(messages);
     })
 
     .fail(function(){
