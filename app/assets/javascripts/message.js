@@ -56,7 +56,6 @@ $(function(){
     })
 
     .done(function(messages){
-      console.log(messages);
       messages.forEach(function(message){
         var insertHTML = buildHTML(message)
         $('#message').append(insertHTML)
