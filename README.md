@@ -8,19 +8,20 @@ DB作成から考え、haml、Sass(BEM設計)、JavaScript、jQuery、MySQL、AW
 
 
 *サイトURL*
+
 [ChatSpace](http://52.193.61.236/)
 
 *テスト用アカウント*
 
 [email] testuser1@gmail.com
+
 [password] testusertestuser
 
 
 ## 機能
 * 会員登録・編集・ログイン機能(gem devise)
 * チャットグループ・作成・編集機能(Ajaxを用いたインクリメンタルサーチ)
-* メッセージ作成機能
-
+* メッセージ作成機能(Ajaxを用いた非同期通信・自動更新)
 
 ## 技術
 * amazonS3への画像アップロード
