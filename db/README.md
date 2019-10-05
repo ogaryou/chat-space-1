@@ -1,50 +1,27 @@
-## messagesテーブル
+# ChatSpace
+グループチャットwebアプリケーション
 
-|Column|Type|Options|
-|------|----|-------|
-|body|text|
-|image|string|
-|group_id|references|null: false, foreign_key: true|
-|user_id|references|null: false, foreign_key: true|
-
-### Association
-- belongs_to :group
-- belongs_to :user
+ユーザー同士でグループを作成しチャットできるアプリケーション
+[ChatSpace](http://52.193.61.236/)
 
 
-## usersテーブル
+*テスト用アカウント*
 
-|Column|Type|Options|
-|------|----|-------|
-|name|string|null: false|
-|email|string|unique: true, null: false|
+[email] testuser1@gmail.com
+[password] testusertestuser
 
-### index
-- add_index :users, :name
 
-### Association
-- has_many :messages
-- has_many :group_users
-- has_many :groups, through: :group_users
+## 概要
+DB作成から考え、haml、Sass(BEM設計)、JavaScript、jQuery、MySQL、AWSなどwebアプリケーション作成の土台となる言語を活用して実装しました。正規化表現によるrインクリメンタルサーチ、API、非同期更新、自動更新の機能がついています。
 
-## groupsテーブル
+## 機能
+* 会員登録・編集・ログイン機能(gem devise)
+* チャットグループ・作成・編集機能(Ajaxを用いたインクリメンタルサーチ)
+* メッセージ作成機能
 
-|Column|Type|Options|
-|------|----|-------|
-|group|string|null: false|
 
-### Association
-- has_many :messages
-- has_many :group_users
-- has_many :users, through: :group_users
-
-## group_users
-
-|Column|Type|Options|
-|------|----|-------|
-|user_id|references|null: false, foreign_key: true|
-|group_id|references|null: false, foreign_key: true|
-
-### Association
-- belongs_to :group
-- belongs_to :user
+## 技術
+* amazonS3への画像アップロード
+* AWS EC2
+* Capistranoを利用した自動デプロイ
+* Ajaxを利用したインクリメンタルサーチ・非同期通信・自動更新
