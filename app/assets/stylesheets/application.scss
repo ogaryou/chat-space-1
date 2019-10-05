@@ -25,12 +25,11 @@ body {
 // layout
 
 .layout {
+  display: flex;
   &__dashboard {
-    float: left;
     width: 300px;
   }
   &__timeline {
-    float: right;
     width: calc(100vw - 300px);
   }
   &::after {
