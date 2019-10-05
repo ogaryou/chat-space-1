@@ -28,3 +28,8 @@ DB作成から考え、haml、Sass(BEM設計)、JavaScript、jQuery、MySQL、AW
 * AWS EC2
 * Capistranoを利用した自動デプロイ
 * Ajaxを利用したインクリメンタルサーチ・非同期通信・自動更新
+
+
+## 言語・フレームワーク
+ruby 2.3.1
+Rails 5.0.7.2
