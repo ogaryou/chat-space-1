@@ -32,4 +32,5 @@ DB作成から考え、haml、Sass(BEM設計)、JavaScript、jQuery、MySQL、AW
 
 ## 言語・フレームワーク
 ruby 2.3.1
+
 Rails 5.0.7.2
